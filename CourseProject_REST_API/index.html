@@ -12,48 +12,12 @@
         </h4>
 
         <div>
-            <h3>Find songs by artist name</h3>
-            <!--
-            <form>
-                <div>
-                    <label>Artist Name</label>
-                    <input type="text" id="artistName">
-                    <button type="submit">Summit</button>
-                </div>
-                
-            </form>
-            -->
             <form action="" id="userInput">
-                <h1>Artist Name</h1>
-                <input type="text" id="artistName" placeholder="Enter artist's name...">
+                <h1>Music Search</h1>
+                <input type="text" id="searchTerm" placeholder="Enter artist's name or key word...">
                 <button type="submit">Submit</button>
               </form>
         </div>
-            <script>
-
-                const SEARCH_URL_PRE=" https://itunes.apple.com/search?term=";
-                const SEARCH_URL_POST=" &media=music&limit=5";
-                let loginForm = document.getElementById("userInput");
-                loginForm.addEventListener("submit", (e) => 
-                {
-                    e.preventDefault();
-
-                    let artistName = document.getElementById("artistName").value;
-                                             
-                    if (artistName == "") 
-                    {
-                        alert("Pleae enter artist name")
-                    } 
-                    else 
-                    {
-                        artistName = artistName.replace(/\s/g, "+");
-                        console.log(artistName)
-                        var search = SEARCH_URL_PRE+artistName+SEARCH_URL_POST
-                        console.log(search)
-
-                    }
-                });
-            </script>
-        
+        <script src="./main.js"></script>       
     </body>
 </html>
